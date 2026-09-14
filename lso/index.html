@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Officium Liturgicum Altaris Sancti Pii X</title>
+<meta name="description" content="Officium Liturgicum Altaris Sancti Pii X – Liturgiczna Służba Ołtarza w Otwocku-Śródborowie.">
+<style>
+:root{--bordo:#5b0f16;--bordo-ciemne:#35070b;--zloto:#c9a24d;--zloto-jasne:#e6c875;--krem:#f2ead9;--tekst:#29231e;--czern:#0b0908}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,"Times New Roman",serif;background:var(--krem);color:var(--tekst);line-height:1.7}
+a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+header{position:sticky;top:0;z-index:1000;background:rgba(11,9,8,.97);border-bottom:1px solid var(--zloto);box-shadow:0 4px 20px #0005}
+.nav{max-width:1250px;margin:auto;min-height:76px;padding:10px 25px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.nav-logo{display:flex;align-items:center;gap:15px;color:var(--zloto-jasne);font-size:15px;letter-spacing:1px;text-transform:uppercase}
+.nav-logo img{width:52px;height:52px;object-fit:contain}
+nav ul{display:flex;list-style:none;gap:30px}
+nav a{color:#eee2ca;font-size:14px;letter-spacing:1px;text-transform:uppercase;transition:.3s}
+nav a:hover{color:var(--zloto-jasne)}
+.ornament{display:flex;align-items:center;justify-content:center;gap:15px;margin:20px auto 35px;color:var(--zloto);font-size:22px}
+.ornament:before,.ornament:after{content:"";height:1px;width:100px;background:linear-gradient(to right,transparent,var(--zloto))}
+.ornament:after{background:linear-gradient(to left,transparent,var(--zloto))}
+.hero{min-height:calc(100vh - 76px);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:linear-gradient(#140505b0,#140505d6),url("wnetrze-2.jpg") center/cover no-repeat;text-align:center;color:white}
+.hero:before{content:"";position:absolute;inset:15px;border:1px solid #e6c87573}
+.hero-content{max-width:1000px;padding:70px 25px;position:relative;z-index:2}
+.hero-logo{width:210px;height:210px;object-fit:contain;margin:0 auto 25px;filter:drop-shadow(0 10px 20px #000b)}
+.eyebrow{color:var(--zloto-jasne);font-size:15px;letter-spacing:4px;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:clamp(38px,6vw,76px);line-height:1.05;font-weight:normal;letter-spacing:2px;text-shadow:0 4px 20px #000}
+.hero-subtitle{max-width:760px;margin:25px auto 35px;font-size:20px;color:#eee2ca}.latin{color:var(--zloto-jasne);font-style:italic;font-size:19px}
+.button{display:inline-block;padding:13px 28px;border:1px solid var(--zloto);background:#5b0f16d9;color:white;letter-spacing:2px;text-transform:uppercase;font-size:13px;transition:.3s}
+.button:hover{background:var(--zloto);color:var(--czern)}
+section{padding:100px 25px}.container{max-width:1150px;margin:auto}
+.section-title{text-align:center;color:var(--bordo);font-size:40px;font-weight:normal;line-height:1.2}
+.section-intro{max-width:750px;margin:0 auto 55px;text-align:center;font-size:18px;color:#63594d}
+.about{background:linear-gradient(#f2ead9f5,#f2ead9f5),url("prezbiterium.jpg") center/cover}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-image{position:relative}.about-image img{width:100%;height:620px;object-fit:cover;border:8px solid #e9ddc5;box-shadow:0 15px 40px #0004}
+.about-image:after{content:"";position:absolute;inset:18px;border:1px solid var(--zloto);pointer-events:none}
+.about-text h3{color:var(--bordo);font-size:29px;font-weight:normal;margin-bottom:20px}.about-text p{margin-bottom:20px}
+.dropcap:first-letter{float:left;font-size:64px;line-height:.8;padding-right:8px;color:var(--bordo)}
+.service{background:linear-gradient(#35070bf7,#35070bf7),url("wnetrze-1.jpg") center/cover;color:#eee2ca}
+.service .section-title{color:var(--zloto-jasne)}.service .section-intro{color:#cdbfa7}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.card{padding:40px 30px;text-align:center;background:linear-gradient(145deg,#ffffff0d,#0002);border:1px solid #c9a24d8c;transition:.35s}
+.card:hover{transform:translateY(-8px);border-color:var(--zloto-jasne)}.card-symbol{font-size:45px;color:var(--zloto-jasne);margin-bottom:15px}.card h3{color:white;font-size:24px;font-weight:normal;margin-bottom:15px}.card p{color:#cfc2aa;font-size:16px}
+.patron{background:var(--krem)}.patron-grid{display:grid;grid-template-columns:420px 1fr;gap:70px;align-items:center}.patron-photo img{width:100%;height:560px;object-fit:cover;border:7px solid white;box-shadow:0 15px 45px #0004}
+.patron-text h3{font-size:34px;color:var(--bordo);font-weight:normal}.patron-text .dates{color:#806321;font-size:17px;letter-spacing:2px;margin-bottom:25px}
+.quote{margin:30px 0;padding:25px 30px;border-left:4px solid var(--zloto);background:#e8dcc4;font-size:20px;font-style:italic;color:var(--bordo-ciemne)}
+.liturgy{background:#eee5d2}.liturgy-box{max-width:900px;margin:auto;padding:60px;background:#f7f0e2;border:1px solid var(--zloto);box-shadow:0 15px 50px #0002;text-align:center}.cross{color:var(--bordo);font-size:50px;margin-bottom:20px}.liturgy-box h3{color:var(--bordo);font-size:30px;font-weight:normal;margin-bottom:20px}
+.gallery{background:var(--czern)}.gallery .section-title{color:var(--zloto-jasne)}.gallery .section-intro{color:#bdb2a0}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.gallery-item{height:330px;overflow:hidden;position:relative;border:1px solid #c9a24d73;cursor:pointer}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.gallery-item:hover img{transform:scale(1.08)}
+.vocation{color:white;text-align:center;background:linear-gradient(#35070be8,#35070bf5),url("wnetrze-2.jpg") center/cover}.vocation h2{font-size:45px;font-weight:normal;color:var(--zloto-jasne)}.vocation p{max-width:700px;margin:25px auto 35px;color:#dfd2bc;font-size:18px}
+.contact{background:var(--krem)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}.contact-box{padding:45px;background:#eee4d0;border-top:3px solid var(--bordo)}.contact-box h3{color:var(--bordo);font-size:27px;font-weight:normal;margin-bottom:20px}.location{color:#806321;font-size:18px}
+footer{padding:55px 25px;background:var(--czern);border-top:1px solid var(--zloto);text-align:center;color:#a99d89}.footer-logo{width:100px;margin:0 auto 20px}footer h3{color:var(--zloto-jasne);font-weight:normal;font-size:21px;margin-bottom:8px}.copyright{font-size:13px;color:#756c5f}
+@media(max-width:900px){.nav{flex-direction:column;padding:12px 15px}nav ul{gap:15px;flex-wrap:wrap;justify-content:center}nav a{font-size:11px}.hero{min-height:850px}.hero-logo{width:170px;height:170px}.about-grid,.patron-grid,.contact-grid{grid-template-columns:1fr}.about-image img{height:500px}.patron-photo{max-width:420px;margin:auto}.cards{grid-template-columns:1fr}.gallery-grid{grid-template-columns:repeat(2,1fr)}.liturgy-box{padding:40px 25px}}
+@media(max-width:550px){section{padding:70px 18px}.nav-logo span{font-size:11px}.nav-logo img{width:42px;height:42px}nav ul{gap:10px}.hero-content{padding:50px 18px}.hero-subtitle{font-size:17px}.section-title{font-size:32px}.gallery-grid{grid-template-columns:1fr}.gallery-item{height:420px}.vocation h2{font-size:34px}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<a href="#start" class="nav-logo"><img src="herb.png" alt="Herb Officium Liturgicum"><span>Officium Liturgicum<br>Altaris Sancti Pii X</span></a>
+<nav><ul><li><a href="#o-nas">O nas</a></li><li><a href="#sluzba">Służba</a></li><li><a href="#patron">Patron</a></li><li><a href="#liturgia">Liturgia</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#kontakt">Kontakt</a></li></ul></nav>
+</div></header>
+
+<main id="start">
+<section class="hero"><div class="hero-content">
+<img src="herb.png" alt="Herb Officium Liturgicum Altaris Sancti Pii X" class="hero-logo">
+<div class="eyebrow">Liturgiczna Służba Ołtarza</div>
+<h1>Officium Liturgicum<br>Altaris Sancti Pii X</h1>
+<div class="ornament"><span>✦</span></div>
+<p class="hero-subtitle">Służba przy ołtarzu, formacja i umiłowanie Świętej Liturgii pod patronatem <strong>św. Piusa X</strong>.</p>
+<p class="latin">Instaurare omnia in Christo</p><br><br>
+<a href="#o-nas" class="button">Poznaj nas</a>
+</div></section>
+
+<section class="about" id="o-nas"><div class="container">
+<h2 class="section-title">O naszej służbie</h2><div class="ornament"><span>✠</span></div>
+<p class="section-intro">Officium Liturgicum Altaris Sancti Pii X to wspólnota młodych ludzi pragnących wiernie i godnie służyć przy ołtarzu.</p>
+<div class="about-grid"><div class="about-image"><img src="prezbiterium.jpg" alt="Ołtarz i prezbiterium"></div>
+<div class="about-text"><h3>Ad maiorem Dei gloriam</h3>
+<p class="dropcap">Nasza Liturgiczna Służba Ołtarza działa w Otwocku, w Śródborowie. Tworzą ją ministranci, lektorzy oraz ceremoniarze, których łączy pragnienie pięknej i godnej służby przy ołtarzu.</p>
+<p>Szczególne miejsce w naszej wspólnocie zajmuje umiłowanie tradycji liturgicznej, piękna świętych obrzędów oraz odpowiedzialności za powierzony nam apostolat.</p>
+<p>Chcemy, aby służba przy ołtarzu była nie tylko obowiązkiem, ale przede wszystkim drogą formacji, modlitwy i wzrastania w wierze.</p>
+</div></div></div></section>
+
+<section class="service" id="sluzba"><div class="container">
+<h2 class="section-title">Nasza służba</h2><div class="ornament"><span>✠</span></div>
+<p class="section-intro">Przy ołtarzu każdy ma swoje miejsce, zadanie i odpowiedzialność.</p>
+<div class="cards">
+<div class="card"><div class="card-symbol">✠</div><h3>Ministranci</h3><p>Pomagają kapłanowi przy sprawowaniu Świętej Liturgii, ucząc się dokładności, skupienia i odpowiedzialności.</p></div>
+<div class="card"><div class="card-symbol">✦</div><h3>Lektorzy</h3><p>Podejmują posługę słowa Bożego, służąc wspólnocie poprzez czytanie lekcji i innych tekstów liturgicznych.</p></div>
+<div class="card"><div class="card-symbol">☩</div><h3>Ceremoniarze</h3><p>Czuwają nad przebiegiem celebracji, dbając o właściwy porządek i piękno liturgicznych obrzędów.</p></div>
+</div></div></section>
+
+<section class="patron" id="patron"><div class="container">
+<h2 class="section-title">Nasz patron</h2><div class="ornament"><span>✠</span></div>
+<div class="patron-grid"><div class="patron-photo"><img src="sw-pius-x.jpg" alt="Święty Pius X"></div>
+<div class="patron-text"><h3>Święty Pius X</h3><div class="dates">PAPIEŻ • PATRON NASZEJ SŁUŻBY</div>
+<p>Święty Pius X jest patronem naszej wspólnoty i wzorem gorliwości o chwałę Bożą oraz piękno Świętej Liturgii.</p>
+<p>Jego duchowe dziedzictwo przypomina nam, że służba Boża wymaga zarówno pobożności, jak i sumienności.</p>
+<div class="quote">„Wszystko odnowić w Chrystusie.”</div>
+<p>Niech jego przykład prowadzi nas w codziennej służbie przy ołtarzu i pomaga nam coraz bardziej kochać Chrystusa obecnego w Najświętszym Sakramencie.</p>
+</div></div></div></section>
+
+<section class="liturgy" id="liturgia"><div class="container">
+<h2 class="section-title">Liturgia</h2><div class="ornament"><span>✠</span></div>
+<div class="liturgy-box"><div class="cross">✠</div><h3>Przy ołtarzu służymy Chrystusowi</h3>
+<p>Święta Liturgia jest centrum naszej służby. Pragniemy troszczyć się o jej piękno, godność, porządek i należny jej szacunek.</p><br>
+<p>Formacja ministrantów, lektorów i ceremoniarzy obejmuje zarówno naukę praktycznych zasad służby, jak również pogłębianie wiary i znajomości liturgii.</p>
+</div></div></section>
+
+<section class="gallery" id="galeria"><div class="container">
+<h2 class="section-title">Galeria</h2><div class="ornament"><span>✦</span></div>
+<p class="section-intro">Piękno świątyni, liturgii i służby przy ołtarzu.</p>
+<div class="gallery-grid">
+<div class="gallery-item"><img src="wnetrze-1.jpg" alt="Świątynia i ołtarz"></div>
+<div class="gallery-item"><img src="wnetrze-2.jpg" alt="Wnętrze świątyni"></div>
+<div class="gallery-item"><img src="prezbiterium.jpg" alt="Prezbiterium"></div>
+<div class="gallery-item"><img src="oltarz.jpg" alt="Ołtarz"></div>
+<div class="gallery-item"><img src="liturgia.jpg" alt="Liturgia"></div>
+<div class="gallery-item"><img src="sluzba.jpg" alt="Służba liturgiczna"></div>
+<div class="gallery-item"><img src="herb-1.png" alt="Herb wspólnoty"></div>
+<div class="gallery-item"><img src="herb.png" alt="Herb Officium Liturgicum"></div>
+</div></div></section>
+
+<section class="vocation"><div class="container"><h2>Servire Deo</h2><div class="ornament"><span>✠</span></div>
+<p>Służba przy ołtarzu jest zaszczytem, odpowiedzialnością i szkołą wiary. To tutaj uczymy się, że wszystko, co czynimy, możemy ofiarować Bogu.</p>
+<a href="#kontakt" class="button">Skontaktuj się z nami</a></div></section>
+
+<section class="contact" id="kontakt"><div class="container">
+<h2 class="section-title">Kontakt</h2><div class="ornament"><span>✠</span></div>
+<p class="section-intro">Chcesz dowiedzieć się więcej o naszej służbie? Zapraszamy do kontaktu.</p>
+<div class="contact-grid">
+<div class="contact-box"><h3>Officium Liturgicum</h3><p><strong>Liturgiczna Służba Ołtarza</strong></p><p class="location">Otwock – Śródborów</p><br><p>Ministranci • Lektorzy • Ceremoniarze</p></div>
+<div class="contact-box"><h3>Sanctus Pius X</h3><p>Patron naszej służby</p><br><p><em>„Instaurare omnia in Christo”</em></p><br><p>Wszystko odnowić w Chrystusie.</p></div>
+</div></div></section>
+</main>
+
+<footer><img src="herb.png" alt="Herb" class="footer-logo"><h3>Officium Liturgicum Altaris Sancti Pii X</h3><p class="latin">Liturgiczna Służba Ołtarza</p><div class="ornament"><span>✠</span></div><p class="copyright">© 2026 Officium Liturgicum Altaris Sancti Pii X</p></footer>
+</body>
+</html>
